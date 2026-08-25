@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: baozi
+
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/baozistore_db?createDatabaseIfNotExist=true}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:8453%n$}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  sql:
+    init:
+      mode: always
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
